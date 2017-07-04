@@ -1,7 +1,7 @@
-Role Name
+Timecapsule
 =========
 
-A brief description of the role goes here.
+This role will configure an Ubuntu host to act as a timecapsule target via AFP.
 
 Requirements
 ------------
@@ -30,9 +30,9 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+Apache
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+github.com/gigaturtle

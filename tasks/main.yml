@@ -1,2 +1,44 @@
 ---
-# tasks file for ansible.role.timecapsule
+- name: Install required packages
+  apt: name={{ item }} state=present
+  with_items:
+    - netatalk
+    - libc6-dev 
+    - avahi-daemon 
+    - libnss-mdns 
+
+- name: Configure NSS conf file
+  lineinfile:
+    dest: /etc/nsswitch.conf
+    regexp: 
+    line: "hosts:          files mdns4_minimal [NOTFOUND=return] dns mdns4 mdns"
+    state: present
+    backup: yes
+
+- name: Configure Avahi conf file
+  copy:
+    src: files/afpd.service
+    dest: /etc/avahi/services/afpd.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart avahi-daemon
+
+- name: Configure netatalk conf file
+  replace:
+    path: /etc/netatalk/AppleVolumes.default
+    regexp: '~/'
+    replace: '/media/glut/Store/Users/Jackie/Backups/ options:tm      Backup'
+    backup: yes
+  notify: restart netatalk
+
+- name: Configure the netatalk defaults file
+  copy:
+    src: files/netatalk
+    dest: /etc/default/netatalk
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart netatalk
+
+...

@@ -1,2 +1,7 @@
 ---
-# handlers file for ansible.role.timecapsule
+- name: restart avahi-daemon
+  service: name=avahi-daemon state=restarted
+- name: restart netatalk
+  service: name=netatalk state=restarted
+
+...
