@@ -1,6 +1,9 @@
 ---
 services: docker
 
+language: python
+python: "2.7"
+
 env:
   - distro: ubuntu1604
     playbook: test.yml
