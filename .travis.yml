@@ -1,0 +1,23 @@
+---
+sudo: required
+
+env:
+  - distro: ubuntu1604
+    init: /lib/systemd/systemd
+
+services:
+  - docker
+
+before_install: 
+  - 'docker pull geerlingguy/docker-${distro}-ansible:latest'
+
+script: 
+  - container_id=$(mktemp)
+    #  - 'docker run --detach --volume="${PWD}":/etc/ansible/roles/role_u\
+    # nder_test:ro ${run_opts} geerlingguy/docker-${distro}-ansible:latest\
+    # "${init}" > "${container_id}"'
+
+notifications: 
+
+
+...
