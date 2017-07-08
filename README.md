@@ -1,6 +1,6 @@
 Timecapsule
 =========
-
+[![Build Status](https://travis-ci.org/gigaturtle/ansible.role.timecapsule.svg?branch=master)](https://travis-ci.org/gigaturtle/ansible.role.timecapsule)
 This role will configure an Ubuntu host to act as a timecapsule target via AFP.
 
 Requirements
