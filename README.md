@@ -1,22 +1,23 @@
 Timecapsule
 =========
 [![Build Status](https://travis-ci.org/gigaturtle/ansible.role.timecapsule.svg?branch=master)](https://travis-ci.org/gigaturtle/ansible.role.timecapsule)
+
 This role will configure an Ubuntu host to act as a timecapsule target via AFP.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ubuntu 16.04
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+None.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
 
 Example Playbook
 ----------------
@@ -25,7 +26,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: backup-servers
       roles:
-         - not yet published in galaxy
+         - ansible.role.timecapsule
 
 License
 -------
