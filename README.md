@@ -26,7 +26,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: backup-servers
       roles:
-         - ansible.role.timecapsule
+         - ansible.timecapsule
 
 License
 -------
