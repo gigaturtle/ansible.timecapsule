@@ -28,7 +28,7 @@
   replace:
     path: /etc/netatalk/AppleVolumes.default
     regexp: '~/'
-    replace: '/media/glut/Store/Users/Jackie/Backups/ options:tm      Backup'
+    replace: '{{ backup_dir }} options:tm      Backup'
     backup: yes
   notify: restart netatalk
 

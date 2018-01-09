@@ -1,2 +1,6 @@
 ---
 # defaults file for ansible.role.timecapsule
+
+# This is where timecapsule files will be saved
+backup_dir: 
+

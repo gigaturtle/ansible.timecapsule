@@ -1,23 +1,27 @@
 Timecapsule
 =========
-[![Build Status](https://travis-ci.org/gigaturtle/ansible.role.timecapsule.svg?branch=master)](https://travis-ci.org/gigaturtle/ansible.role.timecapsule)
+[![Build Status](https://travis-ci.org/gigaturtle/ansible.timecapsule.svg?branch=master)](https://travis-ci.org/gigaturtle/ansible.timecapsule)
 
 This role will configure an Ubuntu host to act as a timecapsule target via AFP.
 
 Requirements
 ------------
 
-Ubuntu 16.04
+Tested with Ubuntu 16.04. This role installs the following packages with apt:
+- netatalk
+- libc6-dev
+- avahi-daemon
+- libnss-mdns
 
 Role Variables
 --------------
 
-None.
+backup_dir: Specify the absolute path where backup files will be stored.
 
 Dependencies
 ------------
 
-None.
+This does not depend on any other roles.
 
 Example Playbook
 ----------------
@@ -36,4 +40,4 @@ Apache
 Author Information
 ------------------
 
-github.com/gigaturtle
+[github.com/gigaturtle](https://github.com/gigaturtle)
